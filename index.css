@@ -1,0 +1,156 @@
+body{
+    background-color: #000; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: none;
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+}
+.cursor{
+    position: fixed;
+    height: 20px;
+    width: auto;
+    display: flex;
+    top: 0%;
+    left: 0%;
+    pointer-events: all;
+}
+#scape{
+    position: absolute;
+    display: grid;
+    top: 10%;
+    left: 22%;    
+    padding: 24%;
+    background-color: antiquewhite;
+    border: #b077b2 12px solid;
+    border-radius: 2%;
+}
+    .wall1{
+        position: absolute;
+        width: 90%;
+        height: 2%;
+        background: #e10000;
+        top: 12%;
+        z-index: 2;
+    }
+    .wall2{
+        position: absolute;
+        width: 2%;
+        height: 77%;
+        background: #e10000;
+        top: 12%;
+        left: 90%;
+        z-index: 2;
+    }
+    .wall3{
+        position: absolute;
+        width: 78%;
+        height: 2%;
+        background: #e10000;
+        top: 87%;
+        left: 12%;
+        z-index: 2;
+    }
+    .wall4{
+        position: absolute;
+        width: 2%;
+        height: 50%;
+        background: #e10000;
+        top: 37%;
+        left: 12%;
+        z-index: 2;
+    }
+    .wall5{
+        position: absolute;
+        width: 67%;
+        height: 2%;
+        background: #e10000;
+        top: 37%;
+        left: 12%;
+        z-index: 2;
+    }
+    .wall6{
+        position: absolute;
+        width: 2%;
+        height: 42%;
+        background: #e10000;
+        top: 37%;
+        left: 77%;
+        z-index: 2;
+    }
+
+    /*Worm*/
+.part{
+    position: absolute;
+    background: #b077b2;
+    width: 4%;
+    height: 8%;
+    border-radius: 50%;
+    left: 20%;
+    top: 20%;
+}
+.face{
+    position: absolute;
+    background: #8e5469;
+    width: 4%;
+    height: 8%;
+    border-radius: 50%;
+    left: 23%;
+    top: 20%;
+}
+
+/*Deco*/
+    .cir{
+        display: flex;
+        position: relative;
+        justify-content: space-around;
+        background-color: #04602f;
+        border-radius: 50%;
+        width: 20%;
+        height: 40%;
+    }
+.grass{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -10%;
+    left: -10%;
+    pointer-events: none;
+    z-index: 2;
+}
+.grass2{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -10%;
+    right: -90%;
+    pointer-events: none;
+    z-index: 2;
+}
+    .cirz{
+        display: flex;
+        position: relative;
+        justify-content: space-around;
+        background-color: #0e3f25;
+        border-radius: 50%;
+        width: 20%;
+        height: 40%;
+    }
+.grass3{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -5%;
+    left: -2%;
+    pointer-events: none;
+    z-index: 1;
+}
+.grass4{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -5%;
+    right: -82%;
+    pointer-events: none;
+    z-index: 1;
+}
