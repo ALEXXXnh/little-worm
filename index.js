@@ -43,3 +43,19 @@
             }
 
             animate();
+
+
+
+            //forfgot to make collissions of the walls i gotta hear a podcast abput it while i code
+            const walls = document.querySelectorAll('[class*="wall"]');
+            function collission(element){
+                const Rect = element.getBoundingClientRect();
+                return [...walls].some(wall =>) 
+                return (
+                    Rect.left < walls.right &&
+                    Rect.right > w.left &&
+                    Rect.top < w.bottom &&
+                    Rect.bottom > w.top
+                );
+            };
+            //gotta sleep i hate my life
