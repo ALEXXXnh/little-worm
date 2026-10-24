@@ -1,22 +1,20 @@
                 //ez pc
-                const maze = document.getElementById('#scape')
-                const parts = [document.querySelectorAll('#worm .part')];
-                const partDstance = 10;
-                const positions = [];
+                //not ez pc anymore i dont get why this ddoesnt work
+                const maze = document.getElementById('scape2')
+                const parts = [...document.querySelectorAll('#worm .face, #worm .part')];
+                //const partDstance = 10; maybe this too?
+                //const positions = []; gotta hide mine
                         //HERE IR THE PROBLEM OFC
-                const rect = maze.getBoundingClientRect();
-                const startX = rect.width / 2;
-                const startY = rect.height / 2;
-
-                let mouseX = startX;
-                let mouseY = startY;
-
-                parts.forEach((part, i) =>{
-                    positions.push({
-                        x: startX - i  * partDstance,
-                        y: startY
-                    });
-                });
+                //so copilot said i shoul create a const and define followspeed i can do that idk why but may make this move
+                const spacing = 18;
+                const followSpeed = 0.2;
+                const positions = parts.map((_, i) => ({
+                x: maze.clientWidth / 2 - i * spacing,
+                y: maze.clientHeight / 2
+                }));
+                //i think there i nedd to add somthin
+                let mouseX = positions[0].x;
+                let mouseY = positions[0].y;
                 //got it perfectly  but i think there is a problem
                 maze.addEventListener('mousemove', (e) => {
                     const rect = maze.getBoundingClientRect();
@@ -35,7 +33,7 @@
                     positions[i].y += (positions[i - 1].y - positions[i].y) * followSpeed;
                 }
                     ////wth
-                wormParts.forEach((part, i) => {
+                parts.forEach((part, i) => {
                     part.style.left = `${positions[i].x}px`;
                     part.style.top = `${positions[i].y}px`;
                     part.style.transform = 'translate(-50%, -50%)';

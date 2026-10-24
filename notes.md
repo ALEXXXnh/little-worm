@@ -70,15 +70,15 @@ MY ACTUAL JS
 
 
 ******COPILOT JAVASCRIP GOTTA STARE AT IT UNTIL I UNDERSTAND WTH IT MEANS******
-const maze = document.getElementById('scape');
-const wormParts = [...document.querySelectorAll('#worm .face, #worm .part')];
+const maze = document.getElementById('scape'); 0k
+const wormParts = [...document.querySelectorAll('#worm .face, #worm .part')]; 0k
 
-const spacing = 12;
-                                        const followSpeed = 0.35;
-                                        const positions = wormParts.map((_, i) => ({
-                                            x: maze.clientWidth / 2 - i * spacing,
-                                            y: maze.clientHeight / 2
-                                        }));
+const spacing = 12; forgot
+                const followSpeed = 0.35;
+                const positions = wormParts.map((_, i) => ({
+                x: maze.clientWidth / 2 - i * spacing,
+                y: maze.clientHeight / 2
+                }));
 
 let mouseX = positions[0].x;
 let mouseY = positions[0].y;
@@ -87,7 +87,7 @@ maze.addEventListener('mousemove', (event) => {
     const rect = maze.getBoundingClientRect();
     mouseX = event.clientX - rect.left - maze.clientLeft;
     mouseY = event.clientY - rect.top - maze.clientTop;
-});
+}); 0k
 
 function animate() {
     // The face follows the mouse.
@@ -96,7 +96,8 @@ function animate() {
 
     // Each body part follows the part ahead of it.
     for (let i = 1; i < positions.length; i++) {
-        positions[i].x += (positions[i - 1].x - positions[i].x) * followSpeed;
+        positions[i].x += (positions[i - 1].x - posi
+        tions[i].x) * followSpeed;
         positions[i].y += (positions[i - 1].y - positions[i].y) * followSpeed;
     }
 
@@ -110,3 +111,50 @@ function animate() {
 }
 
 animate();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+****MY TRASH CODE LMAO
+const rect = maze.getBoundingClientRect();
+                const startX = rect.width / 2;
+                const startY = rect.height / 2;
+
+                let mouseX = startX;
+                let mouseY = startY;
+
+                parts.forEach((part, i) =>{
+                    positions.push({
+                        x: startX - i  * partDstance,
+                        y: startY
+                    });
+                });
+
+
+
+
+
+
+
+
+                enough i dont have time fr to polish this more ill try later but maybe too late for submission it was extremly hard idk why

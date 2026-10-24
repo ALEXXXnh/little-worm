@@ -20,19 +20,46 @@ body{
     position: absolute;
     display: grid;
     top: 10%;
-    left: 22%;    
+    left: 30%;   
+    
     padding: 24%;
     background-color: antiquewhite;
     border: #b077b2 12px solid;
     border-radius: 2%;
+    pointer-events: none;
+    z-index: 100;
+}
+#scape2{
+    position: absolute;
+    display: grid;
+    top: 0%;
+    left: 0%;   
+    
+    padding: 100%;
+    background-color: transparent;
+    
+    z-index: 102;
+}
+#scape3{
+    position: absolute;
+    display: grid;
+    top: 10%;
+    left: 30%;   
+    
+    padding: 24%;
+    background-color: transparent;
+    
+    pointer-events: none;
+    z-index: 16660;
 }
     .wall1{
         position: absolute;
+        display: block;
         width: 86%;
         height: 2%;
         background: #e10000;
         top: 18%;
-        z-index: 2;
+        pointer-events: none;
     }
     .wall2{
         position: absolute;
@@ -89,6 +116,7 @@ body{
     border-radius: 50%;
     left: 20%;
     top: 20%;
+    z-index: 900;
 }
 .face{
     position: absolute;
@@ -98,6 +126,7 @@ body{
     border-radius: 50%;
     left: 23%;
     top: 20%;
+    z-index: 901;
 }
 
 /*Deco*/
@@ -154,4 +183,32 @@ body{
     right: -82%;
     pointer-events: none;
     z-index: 1;
+}
+.wormi{
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 0%;
+    left: 0%;
+    z-index: 300;
+}
+.liam{
+    position: relative;
+    width: 333%;
+    height: auto;
+}
+.ap{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    z-index: 65678;
+}
+.ho{
+    position: absolute;
+    width: 12%;
+    height: 13%;
+    top: 12%;
+    left: 32%;
+    pointer-events: none;
+    z-index: 5695;
 }
