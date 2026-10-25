@@ -1,4 +1,4 @@
-                //ez pc
+//ez pc
                 //not ez pc anymore i dont get why this ddoesnt work
                 const maze = document.getElementById('scape2')
                 const parts = [...document.querySelectorAll('#worm .face, #worm .part')];
@@ -21,12 +21,48 @@
                     mouseX = e.clientX - rect.left - maze.clientLeft;
                     mouseY = e.clientY - rect.top - maze.clientTop;
                 });
+                //ifeel like i need more here uhh im stressed
+                function collidesAt(x, y, element){
+                    const rect = maze.getBoundingClientRect();
+                    const mazeRect = maze.getBoundingClientRect();
+
+
+                
+                //im dying
+                const currentX = rect.left = rect.width / 2;
+                const currentY = rect.top = rect.height / 2;
+
+                    const dx = x - positions[0].x;
+                    const dy = y - positions[0].y;
+
+                    const nextLeft = currentX + dx - rect.width / 2;
+                    const nextRight = nextLeft + rect.width;
+
+                    const nextTop = currentY + dy - rect.height / 2;
+                    const nextBottom = nextTop + rect.height / 2;
+                    //i feel like the yandere simulator code
+
+                    return [...walls].some((wall) => {
+                        //i had typos here
+                    const w = wall.getBoundingClientRect();
+                //uh i forgot what i was doing and i think isnt working
+                    //two videos had different explanations im confused
+                return (
+                    Rect.left < w.right &&
+                    Rect.right > w.left &&
+                    Rect.top < w.bottom &&
+                    Rect.bottom > w.top
+                );
+                }); 
+                }
+
+            
+        
                 //not so lost atp 
                 //forgot i think my big problems start here
                 function animate() {
                 positions[0].x += (mouseX - positions[0].x) * followSpeed;
                 positions[0].y += (mouseY - positions[0].y) * followSpeed;
-
                 //i think i half got this
                 for (let i = 1; i < positions.length; i++) {
                     positions[i].x += (positions[i - 1].x - positions[i].x) * followSpeed;
@@ -41,21 +77,10 @@
 
                 requestAnimationFrame(animate);
             }
-
             animate();
-
-
-
             //forfgot to make collissions of the walls i gotta hear a podcast abput it while i code
             const walls = document.querySelectorAll('[class*="wall"]');
             function collission(element){
-                const Rect = element.getBoundingClientRect();
-                return [...walls].some(wall =>) 
-                return (
-                    Rect.left < walls.right &&
-                    Rect.right > w.left &&
-                    Rect.top < w.bottom &&
-                    Rect.bottom > w.top
-                );
-            };
+                const rect = element.getBoundingClientRect();
+            }
             //gotta sleep i hate my life
